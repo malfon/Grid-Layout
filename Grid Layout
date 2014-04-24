@@ -1,0 +1,15 @@
+RectangleShape line;
+			for(int i=0; i<width; i+=width/20)
+			{
+				line = new RectangleShape(new Vector2f(1, height));
+				line.setFillColor(new Color(0,0,0,50));
+				line.setPosition(i, 0);
+				window.draw(line);
+				for(int j=0; j<height; j+=height/20)
+				{
+					line = new RectangleShape(new Vector2f(width, 1));
+					line.setFillColor(new Color(0,0,0,50));
+					line.setPosition(0, j);
+					window.draw(line);
+				}
+			}
